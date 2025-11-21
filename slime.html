@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyper Snail – Solana Meme Token</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin:0;font-family:'Quicksand',Arial,sans-serif;
+      min-height:100vh;
+      background: #151b33 url('generated-image (10).png') center center/cover no-repeat fixed;
+      color:#f6faff;
+      position:relative;
+    }
+    /* Hamburger */
+    .side-hamburger {
+      position:fixed;top:18px;left:18px;z-index:60;width:40px;height:40px;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer;
+    }
+    .side-bar {width:33px;height:5px;background:#29f6d4;margin:4px 0;border-radius:5px;}
+    .side-menu {
+      position:fixed;left:-360px;top:0;width:270px;height:100vh;background:#212749e6;z-index:55;
+      transition:.3s all;box-shadow:2px 0 22px #29f6d444;
+      display:flex;flex-direction:column;align-items:flex-start;padding:24px 34px 17px 27px;
+      overflow-y:auto;
+    }
+    .side-menu.open { left:0; }
+    .closebtn {
+      font-size:2.1em;font-weight:bolder;color:#29f6d4;position:absolute;top:16px;right:23px;cursor:pointer;
+    }
+    .menu-title {font-size:1.54em;font-weight:700;color:#29f6d4;margin-bottom:16px;}
+    .about-block {
+      background:rgba(39,246,212,0.11);border-radius:14px;box-shadow:0 2px 19px #29f6d433;
+      padding:14px 11px; color:#e6fbff;
+      font-size:1.12em;line-height:1.6;margin-bottom:20px;
+    }
+    .about-block h2 {color:#29f6d4;margin:7px 0;}
+    /* Hero */
+    .hero-box {
+      max-width:440px;margin:98px auto 0 auto;padding:34px 13px;text-align:center;
+      background:rgba(24,26,38,0.54);border-radius:32px;box-shadow:0 6px 38px #29f6d433,0 2px 16px #2257cc77;
+    }
+    .hero-img {
+      width:160px;height:160px;object-fit:cover;border-radius:50%;background:#f6faff;
+      box-shadow:0 5px 19px #29f6d4bb,0 2px 8px #2257cc77;border:6px solid #fff;margin:0 auto 18px auto;
+    }
+    .hero-box h1 {
+      font-size:2.5em;letter-spacing:3px;font-weight:900;
+      background:linear-gradient(90deg,#29f6d4,#00bbff 60%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      margin-bottom:13px;
+    }
+    .hero-box .subtitle {
+      font-size:1.19em;font-weight:700;color:#e6feff;margin-bottom:17px;
+    }
+    .hero-box .extra {
+      font-size:1em;color:#29f6d4;margin:13px 0 3px 0;font-weight:600;
+    }
+    .hero-box .slogan {
+      font-size:1.12em;color:#ffd969;font-weight:700;margin-top:13px;
+      letter-spacing:1.2px;text-shadow:0 2px 5px #29f6d422;
+    }
+    /* Footer social bar */
+    .footerbar {
+      width:100vw;display:flex;justify-content:center;align-items:center;gap:38px;
+      background:rgba(21,27,51,0.98);padding:18px 0 14px 0;position:fixed;bottom:0;left:0;z-index:22;
+      box-shadow:0 -2px 20px #29f6d422;
+    }
+    .footericon {
+      width:44px;height:44px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;
+      transition:.19s;border:2px solid #29f6d488;
+      overflow:hidden;
+    }
+    .footericon img {
+      width:32px;height:32px;object-fit:contain;
+      display:block;
+    }
+    .footericon:hover {background:#29f6d4;}
+    @media (max-width:650px){
+      .hero-box{max-width:94vw;}
+      .side-menu{width:98vw;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Hamburger menu bal oldalt -->
+  <div class="side-hamburger" onclick="document.querySelector('.side-menu').classList.add('open');">
+    <div class="side-bar"></div>
+    <div class="side-bar"></div>
+    <div class="side-bar"></div>
+  </div>
+  <div class="side-menu" id="sidemenu">
+    <span class="closebtn" onclick="document.getElementById('sidemenu').classList.remove('open');">&times;</span>
+    <div class="menu-title">About Us</div>
+    <!-- Görgethető tartalom -->
+    <div class="about-block">
+      <h2>Who is Hyper Snail?</h2>
+      <p>
+        Once a slow garden snail, he gained legendary speed when he discovered Solana.
+        Hyper Snail is now a meme-powered symbol of unstoppable momentum and optimism. 
+        His journey began in the crypto underworld, but community hype and wild blockchain energy made him the fastest shell on Solana.
+        From zero utility to hero of memes – Hyper Snail is here for the ride!
+      </p>
+    </div>
+    <div class="about-block">
+      <h2>Story</h2>
+      <p>
+        Hyper Snail started as a joke among degens.
+        Solana's speed revolution transformed his fate. He raced ahead, leaving FUD, rug pulls and the past behind.
+        Now he travels the chain, spreading slime, hope, and bullish vibes wherever he goes.
+      </p>
+    </div>
+    <!-- Hozzáadhatsz még részeket, ha hosszú szöveget akarsz -->
+  </div>
+  <!-- Hero blokkal, karakterképpel -->
+  <div class="hero-box">
+    <img src="generated-image (9).png" alt="Hyper Snail Main Character" class="hero-img" />
+    <h1>Hyper Snail</h1>
+    <div class="subtitle">
+      Solana's unstoppable meme token.
+    </div>
+    <div class="extra">
+      Fast, bold, and driven by pure community power.<br>
+      Join the shell-shocked revolution!
+    </div>
+    <div class="slogan">
+      Don't let the slime slip away – catch Hyper Snail!
+    </div>
+  </div>
+  <!-- Footer hivatalos social ikonok -->
+  <div class="footerbar">
+    <a class="footericon" href="https://x.com/tokensonabs?t=pu2Vm_wGpD0dvS9fcYmHwA&s=09" target="_blank" title="X">
+      <img src="x.png" alt="X">
+    </a>
+    <a class="footericon" href="https://t.me/HyperSnailSOL/" target="_blank" title="Telegram">
+      <img src="telegram.png" alt="Telegram">
+    </a>
+    <a class="footericon" href="https://raydium.io/" target="_blank" title="Raydium DEX">
+      <img src="raydium.png" alt="Raydium">
+    </a>
+    <a class="footericon" href="https://pump.fun/" target="_blank" title="Pump.fun">
+      <img src="pumpfun.png" alt="Pump.fun">
+    </a>
+  </div>
+  <script>
+    // Hamburger menu JS
+    document.querySelector('.side-hamburger').onclick = function() {
+      document.getElementById('sidemenu').classList.add('open');
+    };
+    document.querySelector('.closebtn').onclick = function() {
+      document.getElementById('sidemenu').classList.remove('open');
+    };
+    window.onclick = function(e) {
+      const menu = document.getElementById('sidemenu');
+      if (!menu.classList.contains('open')) return;
+      if (!menu.contains(e.target) && !document.querySelector('.side-hamburger').contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    }
+  </script>
+</body>
+</html>
